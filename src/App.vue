@@ -1,6 +1,18 @@
-<script setup>
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
+<script >
+import HelloWorld from './components/HelloWorld.vue';
+import TheWelcome from './components/TheWelcome.vue';
+import News from './components/News.vue';
+
+export default {
+  name: "App",
+  components:{
+    HelloWorld,
+    TheWelcome,
+    News
+  },
+ 
+};
+
 </script>
 
 <template>
@@ -13,13 +25,19 @@ import TheWelcome from './components/TheWelcome.vue'
   </header>
 
   <main>
-    <TheWelcome />
+    <section>
+      <TheWelcome />
+    </section>
+    <section>
+      <News />
+    </section>
   </main>
 </template>
 
 <style scoped>
 header {
   line-height: 1.5;
+  width: 100%;
 }
 
 .logo {
@@ -27,11 +45,14 @@ header {
   margin: 0 auto 2rem;
 }
 
-@media (min-width: 1024px) {
+
   header {
     display: flex;
     place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
+    margin-bottom: 50px;
+    text-align: center;
+    width: 100%;
+    justify-content: center;
   }
 
   .logo {
@@ -43,5 +64,5 @@ header {
     place-items: flex-start;
     flex-wrap: wrap;
   }
-}
+
 </style>
