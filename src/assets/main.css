@@ -3,9 +3,10 @@
 #app {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem 2rem 5rem !important;
-
   font-weight: normal;
+  background: #252525;
+  height: 100%;
+  box-shadow: 1px 1px 6px -1px #000;
 }
 body{margin: 0 40px;}
 a,
@@ -14,7 +15,10 @@ a,
   color: hsla(160, 100%, 37%, 1);
   transition: 0.4s;
 }
-
+.menu{margin: 5px 0; box-shadow: 1px 2px 7px -2px #000;}
+.menu nav{display: flex; justify-content: space-evenly;width: 100%;background: #fff;}
+.menu nav a{color: #333; padding: 10px;font-weight: 700; text-transform: uppercase;}
+.menu nav a:hover{background: green; color: #fff;}
 @media (hover: hover) {
   a:hover {
     background-color: hsla(160, 100%, 37%, 0.2);
@@ -22,15 +26,7 @@ a,
 }
 
 @media (min-width: 1024px) {
-  body {
-    display: flex;
-    place-items: center;
- 
-  }
 
-  #app {
-    display: flex;
-    padding: 0 2rem;
-    flex-wrap: wrap;
-  }
+
+ 
 }

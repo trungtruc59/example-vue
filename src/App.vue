@@ -1,37 +1,31 @@
 <script >
-import HelloWorld from './components/HelloWorld.vue';
-import TheWelcome from './components/TheWelcome.vue';
-import News from './components/News.vue';
+import Nav from "./components/Nav.vue";
+import Welcome from "./components/HelloWorld.vue";
 
 export default {
   name: "App",
-  components:{
-    HelloWorld,
-    TheWelcome,
-    News
+  components: {
+    HelloWorld: Welcome,
+    BaseNav: Nav,
   },
- 
+  data(){
+    return{
+      user: [],
+    }
+  },
+  created(){
+    fetch("http://localhost:3000/user").then((response) => response.json()).then((data) => (this.user = data));
+  },
+  mounted(){},
 };
 
 </script>
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-    </div>
-  </header>
-
-  <main>
-    <section>
-      <TheWelcome />
-    </section>
-    <section>
-      <News />
-    </section>
-  </main>
+  <base-nav></base-nav>
+  <div class="wrapper">
+    <router-view></router-view>
+  </div>
 </template>
 
 <style scoped>
@@ -59,10 +53,10 @@ header {
     margin: 0 2rem 0 0;
   }
 
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
+  .wrapper {
+    display: block;
+    padding: 40px;
+    text-align: center;
   }
-
+  nav{display: flex;}
 </style>

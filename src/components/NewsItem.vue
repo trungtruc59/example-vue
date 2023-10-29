@@ -23,6 +23,7 @@
     color: #333;
     border-radius: 15px;
     overflow: hidden;
+    box-shadow: 2px 3px 8px -3px #000;
   }
   .details {
     flex: 1;

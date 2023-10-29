@@ -33,6 +33,30 @@ export default {
             title:"Tin tức 4",
             desc:"Lorem Ipsum is simply dummy text of the printing and typesetting industry."
         },
+        {
+            id:1,
+            img:"./src/assets/img/news.png",
+            title:"Tin tức 1",
+            desc:"Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+        },
+        {
+            id:2,
+            img:"./src/assets/img/news.png",
+            title:"Tin tức 2",
+            desc:"Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+        },
+        {
+            id:3,
+            img:"./src/assets/img/news.png",
+            title:"Tin tức 3",
+            desc:"Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+        },
+        {
+            id:4,
+            img:"./src/assets/img/news.png",
+            title:"Tin tức 4",
+            desc:"Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+        },
       ]
     };
   },
@@ -68,7 +92,7 @@ header{
 .box-news{
     display: grid;
     grid-gap: 15px;
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: repeat(3,1fr);
 }
 .box-news img{
     width: 100%;
@@ -83,4 +107,19 @@ header{
 }
 
 .box-news .pic-news{display: block;overflow: hidden;}
+@media (max-width: 990px) {
+    .box-news{
+    display: grid;
+    grid-gap: 15px;
+    grid-template-columns: repeat(3,1fr);
+    }
+}
+@media (max-width: 768px) {
+    .box-news{
+    display: grid;
+    grid-gap: 15px;
+    grid-template-columns: repeat(2,1fr);
+    }
+    
+}
 </style>
